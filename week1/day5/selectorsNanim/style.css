@@ -1,0 +1,27 @@
+/* Este selector estilza solo los elementos li hijos de elementos ul */
+#red > li {
+	/*Hijo directo */
+	background-color: red;
+}
+/*Selector de desendencia*/
+div .des {
+	/*Hijo , nieto, bla bla */
+	background-color: blue;
+}
+
+#importante + .siguiente {
+	background-color: forestgreen;
+}
+
+ul,
+ol {
+	border: 2px solid salmon;
+}
+
+ul li,
+.des + li {
+	border: 2px double green;
+}
+
+.articulo button {
+}
