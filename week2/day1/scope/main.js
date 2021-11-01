@@ -146,6 +146,7 @@ const intervalId = setInterval(() => {
 console.log("IntervaId:", intervalId);
 // SetTimeout ejecuta el callback una vez pasado el tiempo pasado como segundo argumento
 setTimeout(() => {
+	// Clear interval es la forma de pausar y/o deter un invervalo
 	clearInterval(intervalId);
 	console.log("han pasado 5 segundos ya");
 }, 5000);
