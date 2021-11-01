@@ -32,26 +32,31 @@ body {
 	bottom: 0;
 	animation-name: bounce;
 	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
 @keyframes bounce {
 	0% {
-		bottom: 0;
+		margin-bottom: 0px;
 	}
 
 	25% {
-		bottom: 250px;
+		margin-bottom: calc(100vh - 100px);
+		margin-left: 0px;
 	}
 
 	50% {
-		bottom: 500px;
+		margin-bottom: calc(100vh - 100px);
+		margin-left: calc(100vw - 100px);
 	}
 
 	75% {
-		bottom: 250px;
+		margin-bottom: 0px;
+		margin-left: calc(100vw - 100px);
 	}
 
 	100% {
-		bottom: 0;
+		margin-bottom: 0px;
+		margin-left: 0px;
 	}
 }
