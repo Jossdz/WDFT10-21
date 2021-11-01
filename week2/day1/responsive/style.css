@@ -1,0 +1,46 @@
+html {
+	/* tama~o de fuente para utilizarlo en los rems */
+	font-size: 15px;
+}
+
+ul {
+	font-size: 12px;
+}
+
+li {
+	/* Tenemos que utiliza la unidad relativa al tama~o de fuente del padre */
+	font-size: 1.5em;
+}
+
+h1 {
+	/* Tenemos que utilizar la unidad relativa al tama~o de fuente del html */
+	font-size: 1.5rem;
+}
+
+body {
+	/*celular*/
+	background-color: darkkhaki;
+}
+
+/*Tablet*/
+@media screen and (min-width: 600px) {
+	body {
+		background-color: crimson;
+	}
+
+	html {
+		font-size: 10px;
+	}
+}
+/*laptop*/
+@media screen and (min-width: 800px) {
+	body {
+		background-color: forestgreen;
+	}
+}
+/*Cuevana*/
+@media screen and (min-width: 1000px) {
+	body {
+		background-color: peru;
+	}
+}
