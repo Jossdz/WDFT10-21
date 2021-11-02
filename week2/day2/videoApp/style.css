@@ -1,0 +1,62 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+div {
+	background-color: rgb(0, 0, 0, 0.4);
+	height: 20vh;
+}
+
+#container {
+	display: flex;
+	height: 100%;
+}
+
+#movies {
+	background-color: bisque;
+	width: 80vw;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#favorites {
+	background-color: brown;
+	width: 20vw;
+	height: 100%;
+	color: white;
+	font-weight: bold;
+}
+
+.movie {
+	width: 200px;
+	height: 500px;
+}
+
+.movie img {
+	width: 100%;
+	height: 70%;
+	object-fit: cover;
+}
+
+.movie button {
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	transition: all 0.5s linear;
+}
+
+.movie button:hover {
+	transform: scale(1.5);
+}
+
+.movie-info {
+	width: 100%;
+	height: 30%;
+	background-color: white;
+}
