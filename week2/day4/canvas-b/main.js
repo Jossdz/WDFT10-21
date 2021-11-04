@@ -42,25 +42,29 @@ const ctx = $canvas.getContext("2d");
 // ctx.font = "40px sans-serif";
 
 // ctx.fillText("Score: 0", 130, 50);
-let x = 0;
-let y = 0;
-const $button = document.querySelector("button");
+// let x = 0;
+// let y = 0;
+// const $button = document.querySelector("button");
 
-let intervalId;
+// let intervalId;
 
-const image = new Image();
+// const image = new Image();
 
-image.src =
-	"https://static.wikia.nocookie.net/esmegaman/images/3/30/MM11-MegaMan.png";
+// image.src =
+// 	"https://static.wikia.nocookie.net/esmegaman/images/3/30/MM11-MegaMan.png";
 
-console.log(image);
+// console.log(image);
 
-$button.onclick = () => {
-	if (intervalId) return;
-	intervalId = setInterval(() => {
-		ctx.clearRect(0, 0, $canvas.width, $canvas.height);
-		ctx.drawImage(image, x, y, 30, 50);
-		x++;
-		y++;
-	}, 100);
+// $button.onclick = () => {
+// 	if (intervalId) return;
+// 	intervalId = setInterval(() => {
+// 		ctx.clearRect(0, 0, $canvas.width, $canvas.height);
+// 		ctx.drawImage(image, x, y, 30, 50);
+// 		x++;
+// 		y++;
+// 	}, 100);
+// };
+
+document.onkeydown = (event) => {
+	console.log(event.key);
 };
