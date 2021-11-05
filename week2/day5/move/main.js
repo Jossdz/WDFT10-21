@@ -25,10 +25,12 @@ class Character {
 	}
 
 	draw() {
+		// Primero calculamos la nueva posicion del cuadrito
 		this.vy += gravity;
+		this.vx *= friction;
 		this.y += this.vy;
 		this.x += this.vx;
-		this.vx *= friction;
+		// Despues verificamos el borde, asi nuestro cuadrito va a respetar el limite corectamente
 		if (this.y > $canvas.height - this.height) {
 			this.y = $canvas.height - this.height;
 			this.jumps = 0;
@@ -67,13 +69,21 @@ class Bullet {
 		this.y = y;
 		this.width = 10;
 		this.height = 10;
-		this.color = "blue";
+		this.color = "green";
+		this.audio = new Audio();
+		this.audio.src =
+			"https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-69838/cartoon_anime_laser_shoot_hard_fast_001_71523.mp3";
 	}
 
 	draw() {
 		this.y--;
 		ctx.fillStyle = this.color;
 		ctx.fillRect(this.x, this.y, this.width, this.height);
+	}
+
+	shootSound() {
+		this.audio.volume = 0.2;
+		this.audio.play();
 	}
 }
 
@@ -115,6 +125,7 @@ function checkKeys() {
 	if (keys.ArrowUp) cuadrito.jump();
 	if (keys.e) {
 		const bullet = new Bullet(cuadrito.x + 15, cuadrito.y);
+		bullet.shootSound();
 		bullets.push(bullet);
 	}
 }
